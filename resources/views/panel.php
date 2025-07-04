@@ -18,16 +18,21 @@ $translator = $translator->withDefaultCategory(Panel::MESSAGE_CATEGORY);
     </thead>
     <tbody>
     <?php foreach ($renders as $render): ?>
-    <tr>
-        <td><?=$render['file']?></td>
-        <td>
-            <ul>
-                <?php foreach ($render['params'] as $key => $value): ?>
-                <li><?=$key?>: <?=$value?></li>
-                <?php endforeach;?>
-            </ul>
-        </td>
-    </tr>
+        <tr>
+            <td><?=$render['file']?></td>
+            <td>
+                <ul>
+                    <?php foreach ($render['parameters'] as $key => $value): ?>
+                        <li>
+                            <?= $key ?>: <?= get_debug_type($value) ?>
+                            <?php if (is_scalar($value) && $key !== 'content'): ?>
+                                (<?= $value ?>)
+                            <?php endif;?>
+                        </li>
+                    <?php endforeach;?>
+                </ul>
+            </td>
+        </tr>
     <?php endforeach;?>
     </tbody>
 </table>

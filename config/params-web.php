@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use BeastBytes\Yii\Tracy\Panel\View\Panel as ViewPanel;
-use BeastBytes\Yii\Tracy\Panel\View\WebViewCollector;
 use Yiisoft\Definitions\Reference;
+use Yiisoft\Yii\View\Renderer\Debug\WebViewCollector;
 
 return [
     'beastbytes/yii-tracy' => [
