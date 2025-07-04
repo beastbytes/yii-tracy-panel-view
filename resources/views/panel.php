@@ -1,12 +1,19 @@
 <?php
-/** @var array $renders */
+/**
+ * @var array $renders
+ * @var TranslatorInterface $translator
+ */
+
+use BeastBytes\Yii\Tracy\Panel\View\Panel;
+use Yiisoft\Translator\TranslatorInterface;
+
+$translator = $translator->withDefaultCategory(Panel::MESSAGE_CATEGORY);
 ?>
-<h2>View</h2>
 <table>
     <thead>
     <tr>
-        <th>File</th>
-        <th>Parameters</th>
+        <th><?= $translator->translate('view.heading.file') ?>File</th>
+        <th><?= $translator->translate('view.heading.parameters') ?>Parameters</th>
     </tr>
     </thead>
     <tbody>

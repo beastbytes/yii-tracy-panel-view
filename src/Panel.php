@@ -11,6 +11,8 @@ class Panel extends CollectorPanel
 {
     use ViewTrait;
 
+    public const MESSAGE_CATEGORY = 'tracy-view';
+
     private const ICON = <<<ICON
 <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -29,16 +31,17 @@ class Panel extends CollectorPanel
 </svg>
 ICON;
 
-    private const TITLE = 'View';
-
     protected function panelParameters(): array
     {
         return ['renders' => $this->getCollected()];
     }
 
-    protected function panelTitle(): string
+    protected function panelTitle(): array
     {
-        return self::TITLE;
+        return [
+            'id' => 'view.panel.title',
+            'category' => 'tracy-view',
+        ];
     }
 
     protected function tabIcon(array $parameters): string
@@ -51,8 +54,11 @@ ICON;
         return $this->getSummary();
     }
 
-    protected function tabTitle(): string
+    protected function tabTitle(): array
     {
-        return self::TITLE;
+        return [
+            'id' => 'view.tab.title',
+            'category' => 'tracy-view',
+        ];
     }
 }
