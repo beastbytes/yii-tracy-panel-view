@@ -39,7 +39,7 @@ ICON;
     protected function panelTitle(): array
     {
         return [
-            'id' => 'view.panel.title',
+            'id' => 'view.title.panel',
             'category' => 'tracy-view',
         ];
     }
@@ -57,7 +57,7 @@ ICON;
     protected function tabTitle(): array
     {
         return [
-            'id' => 'view.tab.title',
+            'id' => 'view.title.tab',
             'category' => 'tracy-view',
         ];
     }
