@@ -12,8 +12,8 @@ $translator = $translator->withDefaultCategory(Panel::MESSAGE_CATEGORY);
 <table>
     <thead>
     <tr>
-        <th><?= $translator->translate('view.heading.file') ?>File</th>
-        <th><?= $translator->translate('view.heading.parameters') ?>Parameters</th>
+        <th><?= $translator->translate('view.heading.file') ?></th>
+        <th><?= $translator->translate('view.heading.parameters') ?></th>
     </tr>
     </thead>
     <tbody>
