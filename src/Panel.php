@@ -13,13 +13,16 @@ class Panel extends CollectorPanel
 
     public const MESSAGE_CATEGORY = 'tracy-view';
 
+    private const COLOUR_NO_VIEWS = '#404040';
+    private const COLOUR_VIEWS = '#0f49bf';
+
     private const ICON = <<<ICON
 <svg
     xmlns="http://www.w3.org/2000/svg"
     height="24px" 
     viewBox="0 -960 960 960"
     width="24px" 
-    fill="#0f49bf"
+    fill="%s"
 >
     <path 
         d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 
@@ -46,7 +49,10 @@ ICON;
 
     protected function tabIcon(array $parameters): string
     {
-        return self::ICON;
+        return sprintf(
+            self::ICON,
+            $parameters['total'] === 0 ? self::COLOUR_NO_VIEWS : self::COLOUR_VIEWS,
+        );
     }
 
     protected function tabParameters(): array
