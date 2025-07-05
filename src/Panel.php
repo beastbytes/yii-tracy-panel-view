@@ -43,7 +43,7 @@ ICON;
     {
         return [
             'id' => 'view.title.panel',
-            'category' => 'tracy-view',
+            'category' => self::MESSAGE_CATEGORY,
         ];
     }
 
@@ -64,7 +64,7 @@ ICON;
     {
         return [
             'id' => 'view.title.tab',
-            'category' => 'tracy-view',
+            'category' => self::MESSAGE_CATEGORY,
         ];
     }
 }
