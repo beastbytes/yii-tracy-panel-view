@@ -24,13 +24,8 @@ $translator = $translator->withDefaultCategory(Panel::MESSAGE_CATEGORY);
                 <?php if (!empty($render['parameters'])): ?>
                 <ul>
                     <?php foreach ($render['parameters'] as $key => $value): ?>
-                        <li>
-                            <?= $key ?>: <?= get_debug_type($value) ?>
-                            <?php if (is_scalar($value) && $key !== 'content'): ?>
-                                (<?= $value ?>)
-                            <?php endif;?>
-                        </li>
-                    <?php endforeach;?>
+                    <li><?= $key ?>: <?= get_debug_type($value) ?><?php if (is_scalar($value) && $key !== 'content'): ?> (<?= $value ?>)<?php endif; ?></li>
+                    <?php endforeach; ?>
                 </ul>
                 <?php endif;?>
             </td>
