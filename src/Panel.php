@@ -19,9 +19,9 @@ class Panel extends CollectorPanel
     private const ICON = <<<ICON
 <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="24px" 
+    height="24px"
     viewBox="0 -960 960 960"
-    width="24px" 
+    width="24px"
     fill="%s"
 >
     <path 
