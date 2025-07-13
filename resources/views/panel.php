@@ -21,6 +21,7 @@ $translator = $translator->withDefaultCategory(Panel::MESSAGE_CATEGORY);
         <tr>
             <td><?=$render['file']?></td>
             <td>
+                <?php if (!empty($render['parameters'])): ?>
                 <ul>
                     <?php foreach ($render['parameters'] as $key => $value): ?>
                         <li>
@@ -31,6 +32,7 @@ $translator = $translator->withDefaultCategory(Panel::MESSAGE_CATEGORY);
                         </li>
                     <?php endforeach;?>
                 </ul>
+                <?php endif;?>
             </td>
         </tr>
     <?php endforeach;?>
