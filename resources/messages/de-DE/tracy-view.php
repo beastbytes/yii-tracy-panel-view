@@ -7,5 +7,5 @@ return [
     'view.heading.parameters' => 'Parameter',
     'view.title.panel' => 'Sicht',
     'view.title.tab' => 'Sicht',
-    'view.views' => '{total, number} {total, plural, =1{Sicht} other{Ansichten}}',
+    'view.views' => '{total, number}&nbsp;{total, plural, =1{Sicht} other{Ansichten}}',
 ];
