@@ -9,9 +9,9 @@ Install the package using [Composer](https://getcomposer.org):
 
 Either:
 ```shell
-composer require beastbytes/yii-tracy-panel-view
+composer require-dev beastbytes/yii-tracy-panel-view
 ```
-or add the following to the `require` section of your `composer.json`
+or add the following to the `require-dev` section of your `composer.json`
 ```json
 "beastbytes/yii-tracy-panel-view": "<version_constraint>"
 ```
@@ -24,5 +24,5 @@ Does not show data on the tab.
 Names of the rendered view, included partial views, and layout, and their parameters.
 
 ## License
-The BeastBytes Yii Tracy package is free software. It is released under the terms of the BSD License.
+The BeastBytes Yii Tracy Panel View package is free software. It is released under the terms of the BSD License.
 Please see [`LICENSE`](./LICENSE.md) for more information.
