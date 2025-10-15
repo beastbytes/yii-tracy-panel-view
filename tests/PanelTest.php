@@ -2,8 +2,8 @@
 
 namespace BeastBytes\Yii\Tracy\Panel\View\Tests;
 
+use BeastBytes\Yii\Tracy\ContainerProxy;
 use BeastBytes\Yii\Tracy\Panel\View\Panel;
-use BeastBytes\Yii\Tracy\ProxyContainer;
 use HttpSoft\Message\ResponseFactory;
 use HttpSoft\Message\StreamFactory;
 use PHPUnit\Framework\Attributes\After;
@@ -68,7 +68,7 @@ TAB;
 
     private static WebViewCollector $collector;
     private static ContainerInterface $container;
-    private static ContainerInterface $proxyContainer;
+    private static ContainerInterface $containerProxy;
 
     private ?Panel $panel = null;
 
@@ -103,8 +103,8 @@ TAB;
 
         $this->panel = (new Panel(self::$collector));
 
-        self::$proxyContainer = new ProxyContainer(self::$container);
-        $this->panel = $this->panel->withContainer(self::$proxyContainer);
+        self::$containerProxy = new ContainerProxy(self::$container);
+        $this->panel = $this->panel->withContainer(self::$containerProxy);
         $this->panel->startup();
     }
 
